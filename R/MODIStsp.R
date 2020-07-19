@@ -461,6 +461,8 @@ MODIStsp <- function(gui               = TRUE,
     #   the selected product - band names, available indexes, etc.) and
     #   put them in the `p_opts` list. Then launch `MODIStsp_process`
 
+    eval(parse(text = paste0("out_res=", general_opts$out_res)))
+    out_res = as.numeric(out_res)
     MODIStsp_process(sel_prod = general_opts$sel_prod,
                      start_date         = general_opts$start_date,
                      end_date           = general_opts$end_date,
@@ -481,7 +483,7 @@ MODIStsp <- function(gui               = TRUE,
                      bbox               = general_opts$bbox,
                      out_format         = general_opts$out_format,
                      out_res_sel        = general_opts$out_res_sel,
-                     out_res            = as.numeric(general_opts$out_res),
+                     out_res            = out_res,
                      native_res         = prod_opts$native_res,
                      tiled              = prod_opts$tiled,
                      resampling         = general_opts$resampling,

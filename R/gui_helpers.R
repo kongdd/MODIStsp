@@ -476,6 +476,7 @@ gui_save_options <- function(general_opts,
                                                      ymin = bbox_mod[2],
                                                      xmax = bbox_mod[3],
                                                      ymax = bbox_mod[4]))
+    browser()
     required_tiles   <- paste0(
       "H",
       apply(expand.grid("H" = min(d_bbox_mod_tiled$H):max(d_bbox_mod_tiled$H),

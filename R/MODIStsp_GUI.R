@@ -936,6 +936,7 @@ MODIStsp_GUI <- function(general_opts,
                            container = output_res_group,
                            width     = 10)
 
+# browser()
   if (gWidgets::svalue(wids$output_res_sel) == "Native") {
     gWidgets::svalue(wids$output_res)  <- "Native"
     gWidgets::enabled(wids$output_res) <- FALSE
